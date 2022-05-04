@@ -1,8 +1,23 @@
 <mvc:View controllerName="logaligroup.sapui5.controller.App"
-            xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-    <Button id="_IDGenButton1" text="{i18n>showHello}" press=".onShowHello"></Button>
-    <Input id="_IDGenInput1" value="{/recipient/name}"
-           description="Hello {/recipient/name}"
-           valueLiveUpdate="true"
-           width="60%"></Input>
+            xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+            displayBlock="true">
+<Shell id="_IDGenShell1">
+    <App id="_IDGenApp1" >
+    <pages>
+        <Page id="_IDGenPage1" title="{i18n>appTitle}">
+                <content>
+                    <Panel id="_IDGenPanel1" headerText="{i18n>HelloPanel}" class="sapUiResponsiveMargin" width="auto">
+                    <content>
+                        <Button id="_IDGenButton1" text="{i18n>showHello}" press=".onShowHello" class="sapUiSmallMarginEnd" />
+                        <Input  id="_IDGenInput1" value="{/recipient/name}"
+                                valueLiveUpdate="true"
+                                width="60%" />
+                        <Text id="_IDGenText1" text="Hello {/recipient/name}" class="sapUiSmallMargin boldElement sapthemeHighlight-asColor"/>
+                    </content>
+                    </Panel>
+                </content>
+        </Page>
+    </pages>
+    </App>
+</Shell>
 </mvc:View>
